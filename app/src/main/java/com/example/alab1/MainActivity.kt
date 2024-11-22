@@ -7,12 +7,12 @@ import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
 
-    val editText = findViewById<EditText>(R.id.editText)
-    val textView = findViewById<TextView>(R.id.textView)
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val editText = findViewById<EditText>(R.id.editText)
+        val textView = findViewById<TextView>(R.id.textView)
 
         editText.setOnEditorActionListener{_, _, _ ->
             val input = editText.text.toString().toInt()
