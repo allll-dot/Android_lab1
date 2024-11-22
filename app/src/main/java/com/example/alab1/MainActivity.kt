@@ -3,10 +3,12 @@ package com.example.alab1
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
+import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
 
     val editText = findViewById<EditText>(R.id.editText)
+    val textView = findViewById<TextView>(R.id.textView)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +29,9 @@ class MainActivity : AppCompatActivity() {
                 7 -> output = "Воскресенье"
                 else -> output = "Корректный диапазон от 1 до 7"
             }
+
+            textView.text = output
+
             true
         }
     }
